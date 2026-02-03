@@ -1,0 +1,165 @@
+:root {
+  --main-color: #00ffd5;
+  --bg-color: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --text-color: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+nav {
+  background: #020617;
+  padding: 16px 32px;
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: rgb(124, 58, 237);
+}
+
+figcaption {
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color:rgb(245, 158, 11);
+}
+
+.hero p {
+  margin: 1rem;
+  max-width: 600px;
+}
+
+.cta-btn {
+  padding: 1rem 2rem;
+  background: var(--main-color);
+  color: #020617;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #22ffe0;
+  transform: scale(1.05);
+}
+
+.features {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature-card:hover{
+    transform: scale(1.05);
+}
+
+.feature-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+article {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 400px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #020617;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
